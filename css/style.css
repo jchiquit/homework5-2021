@@ -51,20 +51,16 @@ header p{
 /*END STARTER CSS - DO NO CHANGE*/
 
 
-/*Req 1*/
 nav a{
   color: black;
   font-weight: bold;
   text-decoration: none;
-
 }
-/*Req 2*/
-/*Write selector/rule property to add an underline when
-links in the navigation are in the hover or focus state.*/
+
 nav a:hover{
   text-decoration: underline;
 }
-/*Req 3a*/
+
 .skip a{
   background: white;
   left: 0;
@@ -73,23 +69,16 @@ nav a:hover{
   transition: top 1s ease-out;
   z-index: 1;
   position: absolute;
-
-  /*Your code here*/
   top: -50px;
 }
-/*Req 3b*/
-/*Write selector/rule property to position the skip class element*/
+
 .skip a:focus{
   top: -10px;
 }
-/*Req 4*/
-/*Write selector/rule property to style all elements when in focus*/
+
 *:focus{
   border: 2px dashed black;
 }
-
-/*Req 5*/
-
 
 header{
   background-attachment: fixed; /* Parallax effect */
@@ -98,62 +87,48 @@ header{
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
-
-  /*Req 6a*/
-  /*Set margin */
   margin-bottom: 25px;
-
-  /*Req 6b*/
-  /*Set background-image to header.jpg */
   background-image: url("../images/header.jpg");
 
 }
 .container{
-  /*Your Code Here*/
   display: grid;
-
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-rows: auto auto auto auto;
   grid-gap: 20px;
 }
 
-/*Req 7a*/
 .about, .method, .client, .contacts{
-  /*Your Code Here*/
   grid-column: 2 / span 2;
 
 }
 
-/*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
-  /*Your Code Here*/
   grid-column: 1 / -1;
   max-height: 650px;
   overflow: hidden;
 }
 
-/*Req 7b & 8d*/
 .about, .about-image{
-   /*Your Code Here*/
-   grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
    /*Your Code Here*/
-
+   grid-row: 2 / span 1;
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
     /*Your Code Here*/
-
+    grid-row: 3 / span 1;
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
     /*Your Code Here*/
-
+    grid-row: 4 / span 1;
 }
 
 /*Req 9*/
@@ -162,10 +137,9 @@ header{
   border: 10px solid black;
   padding: 30px;
   /*Your code here:*/
+  align-self: center;
 
 }
-
-
 @media all and (min-width: 880px){
 
   img{
@@ -191,13 +165,13 @@ header{
   /*Req 12*/
   .about, .client, .method-image, .contact-image{
     /*Your code here:*/
-    grid-column: 2 / span 2;
+    grid-column: 3 / span 2;
   }
 
   /*Req 13*/
   .about-image, .client-image, .method, .contacts{
     /*Your code here:*/
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 2;
   }
 }
 
